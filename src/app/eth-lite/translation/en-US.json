@@ -44,7 +44,7 @@
     "blockView.content.beneficiary.label": "Mined by",
     "blockView.content.beneficiary.reward.label": "Reward",
     "blockView.content.difficulty.label": "Difficulty",
-    "blockView.content.extraData.label": "Extra data",
+    "blockView.content.extraData.label": "Base fee",
     "blockView.content.mixHash.label": "Mix hash",
     "blockView.content.logsBloom.label": "Logs bloom",
 

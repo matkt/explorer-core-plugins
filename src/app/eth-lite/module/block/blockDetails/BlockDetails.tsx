@@ -5,7 +5,6 @@ import { Label } from "@alethio/ui/lib/data/Label";
 import { NumberBox } from "@alethio/ui/lib/data/box/NumberBox";
 import { GasUsedValueBox } from "@alethio/ui/lib/data/box/GasUsedValueBox";
 import { DifficultyBox } from "@alethio/ui/lib/data/box/DifficultyBox";
-import { DecodedHexData } from "@alethio/ui/lib/data/hex/DecodedHexData";
 import { HexData } from "@alethio/ui/lib/data/hex/HexData";
 import { HashValueBox } from "@alethio/ui/lib/data/box/HashValueBox";
 import { LayoutSection } from "@alethio/ui/lib/layout/content/LayoutSection";
@@ -20,6 +19,7 @@ import { UnclesCountBox } from "@alethio/explorer-ui/lib/box/block/UnclesCountBo
 import { ITranslation } from "plugin-api/ITranslation";
 import { IBlockDetails } from "app/eth-lite/data/block/details/IBlockDetails";
 import { BlockDetailsSlotType } from "./BlockDetailsSlotType";
+import { BigNumber } from "app/util/BigNumber";
 
 export interface IBlockDetailsProps {
     blockDetails: IBlockDetails;
@@ -137,7 +137,7 @@ export class BlockDetails extends React.PureComponent<IBlockDetailsProps> {
                 <LayoutRow>
                     <LayoutRowItem autoHeight>
                         <Label>{tr.get("blockView.content.extraData.label")}</Label>
-                        <DecodedHexData data={block.extraData} />
+                    <NumberBox value={new BigNumber(block.extraData)} locale={locale} />
                     </LayoutRowItem>
                 </LayoutRow> }
                 { block.mixHash ?

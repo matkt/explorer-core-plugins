@@ -7,7 +7,6 @@ import { EthValueBox } from "@alethio/ui/lib/data/box/EthValueBox";
 import { NumberBox } from "@alethio/ui/lib/data/box/NumberBox";
 import { GasUsedValueBox } from "@alethio/ui/lib/data/box/GasUsedValueBox";
 import { DifficultyBox } from "@alethio/ui/lib/data/box/DifficultyBox";
-import { DecodedHexData } from "@alethio/ui/lib/data/hex/DecodedHexData";
 import { HashValueBox } from "@alethio/ui/lib/data/box/HashValueBox";
 import { LayoutSection } from "@alethio/ui/lib/layout/content/LayoutSection";
 import { CmCountBox } from "app/eth-extended/component/box/cm/CmCountBox";
@@ -18,7 +17,7 @@ import { Link } from "plugin-api/component/Link";
 import { ITranslation } from "plugin-api/ITranslation";
 import { IBlockDetails } from "app/shared/data/block/details/IBlockDetails";
 import { BlockAdvancedSlotType } from "./BlockAdvancedSlotType";
-
+import { BigNumber } from "app/util/BigNumber";
 export interface IBlockAdvancedProps {
     blockDetails: IBlockDetails;
     translation: ITranslation;
@@ -101,8 +100,9 @@ export class BlockAdvanced extends React.PureComponent<IBlockAdvancedProps> {
             <LayoutRow>
                 <LayoutRowItem autoHeight>
                     <Label>{tr.get("blockView.content.extraData.label")}</Label>
-                    <DecodedHexData data={block.extraData} />
-                </LayoutRowItem>
+                
+        <NumberBox value={new BigNumber(block.extraData)} locale={locale} />
+</LayoutRowItem>
             </LayoutRow> }
             { block.mixHash || block.receiptsTrie ?
             <LayoutRow minWidth={760}>

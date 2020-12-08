@@ -17,7 +17,7 @@ export class UncleDetailsReader {
             beneficiaryAddress: data["miner"],
             gasLimit: new BigNumber(data["gasLimit"]),
             difficulty: new BigNumber(data["difficulty"]),
-            extraData: String(data["extraData"]),
+            extraData: String(data["baseFee"]),
             mixHash: String(data["mixHash"])
         };
 
