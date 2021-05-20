@@ -96,7 +96,7 @@ export class TxDetails extends React.PureComponent<ITxDetailsProps> {
                 </LayoutRow>
             </LayoutSection>
             <LayoutSection useWrapper>
-                <LayoutRow minWidth={600}>
+                <LayoutRow minWidth={600}>
                     <LayoutRowItem>
                         <Label>{tr.get("general.type")}</Label>
                         <NumberBox value={tx.type} locale={locale} />
@@ -115,11 +115,11 @@ export class TxDetails extends React.PureComponent<ITxDetailsProps> {
                 <LayoutRow minWidth={600}>
                   <LayoutRowItem>
                       <Label>{tr.get("txView.content.maxPriorityFeePerGas.label")}</Label>
-                      <GweiValueBox wei={tx.maxPriorityFeePerGas} locale={locale} />
+                      <NumberBox value={tx.maxPriorityFeePerGas} locale={locale} />
                   </LayoutRowItem>
                   <LayoutRowItem>
                       <Label>{tr.get("txView.content.maxFeePerGas.label")}</Label>
-                      <GweiValueBox wei={tx.maxFeePerGas} locale={locale} />
+                      <NumberBox value={tx.maxFeePerGas} locale={locale} />
                   </LayoutRowItem>
                 </LayoutRow>
                 { txReceipt && <LayoutRow minWidth={750}>
