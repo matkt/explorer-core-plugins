@@ -123,8 +123,8 @@
     "txView.content.cumulativeGasUsed.label": "Cumulative gas used",
     "txView.content.txFee.label": "TX fee",
     "txView.content.maxTxFee.label": "Max TX fee",
-    "txView.content.maxPriorityFeePerGas.label": "MaxPriorityFee/Gas",
-    "txView.content.maxFeePerGas.label": "MaxFee/Gas"
+    "txView.content.maxPriorityFeePerGas.label": "MaxPriority Fee/Gas",
+    "txView.content.maxFeePerGas.label": "Max Fee/Gas",
     "txView.content.timeSpent.label": "Time spent in pool",
     "txView.content.timeSpent.value": "%d s",
     "txView.content.erc20.unknownToken.label": "(Unknown Token)",
