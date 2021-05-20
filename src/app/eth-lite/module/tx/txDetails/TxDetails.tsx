@@ -106,6 +106,21 @@ export class TxDetails extends React.PureComponent<ITxDetailsProps> {
                         <GweiValueBox wei={tx.gasPrice} locale={locale} />
                     </LayoutRowItem>
                 </LayoutRow>
+                <LayoutRow minWidth={600}>
+                <LayoutRowItem>
+                    <Label>{tr.get("general.type")}</Label>
+                    <NumberBox value={tx.type} locale={locale} />
+                </LayoutRowItem>
+                <LayoutRowItem>
+                    <Label>{tr.get("txView.content.maxPriorityFeePerGas.label")}</Label>
+                    <NumberBox value={tx.maxPriorityFeePerGas} locale={locale} />
+                </LayoutRowItem>
+                <LayoutRowItem>
+                    <Label>{tr.get("txView.content.maxFeePerGas.label")}</Label>
+                    <NumberBox value={tx.maxFeePerGas} locale={locale} />
+                </LayoutRowItem>
+                </LayoutRow>
+
                 { txReceipt && <LayoutRow minWidth={750}>
                     <LayoutRowItem>
                         <Label>{tr.get("txView.content.gasUsed.label")}</Label>

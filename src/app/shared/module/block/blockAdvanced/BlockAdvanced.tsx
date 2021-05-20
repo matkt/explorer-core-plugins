@@ -100,9 +100,8 @@ export class BlockAdvanced extends React.PureComponent<IBlockAdvancedProps> {
             <LayoutRow>
                 <LayoutRowItem autoHeight>
                     <Label>{tr.get("blockView.content.extraData.label")}</Label>
-                
-        <NumberBox value={new BigNumber(block.extraData)} locale={locale} />
-</LayoutRowItem>
+                    <NumberBox value={new BigNumber(block.extraData)} locale={locale} />
+                </LayoutRowItem>
             </LayoutRow> }
             { block.mixHash || block.receiptsTrie ?
             <LayoutRow minWidth={760}>

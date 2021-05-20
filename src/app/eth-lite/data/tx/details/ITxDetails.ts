@@ -12,5 +12,8 @@ export interface ITxDetails {
     block: {
         id: number;
     };
+    type: BigNumber;
+    maxPriorityFeePerGas: BigNumber,
+    maxFeePerGas: BigNumber,
     txIndex: number;
 }

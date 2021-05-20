@@ -25,6 +25,7 @@
     "general.gasUsed": "Gas used",
     "general.gasLimit": "Gas limit",
     "general.gasPrice": "Gas price",
+    "general.type": "Transaction type",
     "general.nonce": "Nonce",
 
     "general.grid.footer.loadMore.label": "Load More",
@@ -68,6 +69,8 @@
     "txView.content.gasUsed.label": "Gas used by TX",
     "txView.content.cumulativeGasUsed.label": "Cumulative gas used",
     "txView.content.txFee.label": "TX fee",
+    "txView.content.maxPriorityFeePerGas.label": "MaxPriorityFee/Gas",
+    "txView.content.maxFeePerGas.label": "MaxFee/Gas",
     "txView.content.inputData.label": "Input data",
     "txView.content.error.label": "Error",
     "txView.content.error.genericValue": "Reverted",

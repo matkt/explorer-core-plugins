@@ -16,6 +16,9 @@ export class TxDetailsReader {
             block: {
                 id: Number(data["blockNumber"])
             },
+            type: new BigNumber(data["type"]),
+            maxPriorityFeePerGas: new BigNumber(data["maxPriorityFeePerGas"]),
+            maxFeePerGas: new BigNumber(data["maxFeePerGas"]),
             txIndex: Number(data["transactionIndex"])
         };
 
