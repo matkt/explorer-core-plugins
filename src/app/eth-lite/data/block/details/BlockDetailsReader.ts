@@ -22,7 +22,7 @@ export class BlockDetailsReader {
             gasLimit: new BigNumber(data["gasLimit"]),
             gasUsed: new BigNumber(data["gasUsed"]),
             difficulty: new BigNumber(data["difficulty"]),
-            extraData: data["baseFee"],
+            extraData: data["baseFeePerGas"],
             logsBloom: data["logsBloom"].replace("0x", ""),
             mixHash: data["mixHash"],
             uncles: data["uncles"] || [],
